@@ -40,8 +40,8 @@ public class ClientHandler implements Runnable {
         try {
             while (true) {
 								// сервер отправляет сообщение
-                server.sendMessageToAllClients("Новый участник вошёл в чат!");
-                server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
+                server.sendMessageToAllClients("Новый участник вошёл в игру!");
+                server.sendMessageToAllClients("Количество игроков в игре = " + clients_count);
                 break;
             }
 
@@ -84,6 +84,6 @@ public class ClientHandler implements Runnable {
 				// удаляем клиента из списка
         server.removeClient(this);
         clients_count--;
-        server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
+        server.sendMessageToAllClients("Количество игроков в игре = " + clients_count);
     }
 }
